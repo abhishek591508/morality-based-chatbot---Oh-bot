@@ -70,6 +70,11 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
 }
+.button-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
 
 .primary-button:hover {
   background-color: #357abd;

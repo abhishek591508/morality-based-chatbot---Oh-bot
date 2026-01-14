@@ -1,6 +1,7 @@
 import React from 'react';
 import { getScoreColor } from '../utils/moralCalculations';
 import './ResultsScreen.css';
+import { downloadExcelReport } from '../utils/database';
 
 const ResultsScreen = ({ username, moralScores, feedback, endingType, onPlayAgain }) => {
   const getEndingTitle = () => {
@@ -58,10 +59,16 @@ const ResultsScreen = ({ username, moralScores, feedback, endingType, onPlayAgai
         <div className="ending-section">
           <h3 className="ending-title">{getEndingTitle()}</h3>
         </div>
-
+        
+        <div className='button-row'>
         <button className="primary-button" onClick={onPlayAgain}>
           Play Again
         </button>
+        <button className="primary-button" onClick={downloadExcelReport}>
+          DOWNLOAD EXCEL SHEET
+        </button>
+        </div>
+
       </div>
     </div>
   );
